@@ -1,0 +1,22 @@
+
+RUN PROGRESS SUMMARY
+--------------------
+
+  Status
+    n_mod       =   20000 /   20000
+    [----------------------------------------] 100%
+
+  Diagnostics
+    ne(L)       =      10.1
+    ne(w_hd)    =      10.1
+    ne(w_pred)  =       3.9
+
+  Computed or Predicted
+    n_cmp       =   20000
+    n_prd       =       0
+
+  Time
+    T_el        =  191[h] 55[m] 44.22[s]
+    T / mod     =    0[h]  0[m] 34.55[s]
+    T_tot       =  191[h] 55[m] 44.22[s]
+
