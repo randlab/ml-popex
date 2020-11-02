@@ -1,5 +1,6 @@
 # ml-popex
-Machine learning methods to boost PoPEx
+Machine learning methods to boost PoPEx.
+Use classfiers to assess if models are significant and if running forward is necessary.
 
 ## Reproducing
 
