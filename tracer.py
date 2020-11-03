@@ -24,7 +24,7 @@ class TracerTest():
   
     def run(self, img, name):
         
-        mf6exe = 'mf6beta'
+        mf6exe = 'mf6'
         workspace = self.modflow_workspace(name)
         k = self.get_k(img)
         porosity = self.get_porosity(img)
@@ -75,7 +75,7 @@ class TracerTest():
 
 
         # build MODFLOW 6 files
-        sim = flopy.mf6.MFSimulation(sim_name=name, version='mf6beta',
+        sim = flopy.mf6.MFSimulation(sim_name=name, version='mf6',
                                      exe_name=mf6exe,
                                      sim_ws=workspace)
         
@@ -87,7 +87,7 @@ class TracerTest():
                                      nper=nper, perioddata=tdis_rc)
         # create groundwater flow model and attach to simulation (sim)
         gwfname = 'gwf_' + name
-        gwf = flopy.mf6.MFModel(sim, model_type='gwf6', modelname=gwfname, exe_name='mf6beta')
+        gwf = flopy.mf6.MFModel(sim, model_type='gwf6', modelname=gwfname, exe_name='mf6')
         
         # create iterative model solution
         imsgwf = flopy.mf6.ModflowIms(sim,
@@ -174,7 +174,7 @@ class TracerTest():
                                       filename='{}.adv'.format(gwtname))
 
         # dispersion
-        dsp = flopy.mf6.ModflowGwtdsp(gwt, xt3d=True, diffc=diffc,
+        dsp = flopy.mf6.ModflowGwtdsp(gwt, diffc=diffc,
                                      alh=alphal, alv=alphal,
                                      ath1=alphath,
                                      filename='{}.dsp'.format(gwtname))
@@ -207,7 +207,7 @@ class TracerTest():
         sim.run_simulation()
         
     def run_modpath_transient(self, img, name):
-        mf6exe = 'mf6beta'
+        mf6exe = 'mf6'
         workspace = self.modpath_workspace(name)
         
         k = self.get_k(img)
@@ -246,7 +246,7 @@ class TracerTest():
 
 
         # build MODFLOW 6 files
-        sim = flopy.mf6.MFSimulation(sim_name=name, version='mf6beta',
+        sim = flopy.mf6.MFSimulation(sim_name=name, version='mf6',
                                      exe_name=mf6exe,
                                      sim_ws=workspace)
         
@@ -258,7 +258,7 @@ class TracerTest():
                                      nper=nper, perioddata=tdis_rc)
         # create groundwater flow model and attach to simulation (sim)
         gwfname = 'gwf_' + name
-        gwf = flopy.mf6.MFModel(sim, model_type='gwf6', modelname=gwfname, exe_name='mf6beta')
+        gwf = flopy.mf6.MFModel(sim, model_type='gwf6', modelname=gwfname, exe_name='mf6')
         
         # create iterative model solution
         imsgwf = flopy.mf6.ModflowIms(sim,
@@ -328,7 +328,7 @@ class TracerTest():
         mp.run_model()
         
     def run_modpath(self, img, name):
-        mf6exe = 'mf6beta'
+        mf6exe = 'mf6'
         workspace = self.modpath_workspace(name)
         k = self.get_k(img)
         porosity = self.get_porosity(img)
@@ -362,7 +362,7 @@ class TracerTest():
         relaxation_factor = 1.0
 
         # build MODFLOW 6 files
-        sim = flopy.mf6.MFSimulation(sim_name=name, version='mf6beta',
+        sim = flopy.mf6.MFSimulation(sim_name=name, version='mf6',
                                      exe_name=mf6exe,
                                      sim_ws=workspace)
         
@@ -374,7 +374,7 @@ class TracerTest():
                                      nper=nper, perioddata=tdis_rc)
         # create groundwater flow model and attach to simulation (sim)
         gwfname = 'gwf_' + name
-        gwf = flopy.mf6.MFModel(sim, model_type='gwf6', modelname=gwfname, exe_name='mf6beta')
+        gwf = flopy.mf6.MFModel(sim, model_type='gwf6', modelname=gwfname, exe_name='mf6')
         
         # create iterative model solution
         imsgwf = flopy.mf6.ModflowIms(sim,
@@ -440,7 +440,7 @@ class TracerTest():
         mp.run_model()
 
     def run_steady(self, img, name):
-        mf6exe = 'mf6beta'
+        mf6exe = 'mf6'
         workspace = self.modflow_workspace(name)
         k = self.get_k(img)
         porosity = self.get_porosity(img)
@@ -474,7 +474,7 @@ class TracerTest():
         relaxation_factor = 1.0
 
         # build MODFLOW 6 files
-        sim = flopy.mf6.MFSimulation(sim_name=name, version='mf6beta',
+        sim = flopy.mf6.MFSimulation(sim_name=name, version='mf6',
                                      exe_name=mf6exe,
                                      sim_ws=workspace)
         
@@ -486,7 +486,7 @@ class TracerTest():
                                      nper=nper, perioddata=tdis_rc)
         # create groundwater flow model and attach to simulation (sim)
         gwfname = 'gwf_' + name
-        gwf = flopy.mf6.MFModel(sim, model_type='gwf6', modelname=gwfname, exe_name='mf6beta')
+        gwf = flopy.mf6.MFModel(sim, model_type='gwf6', modelname=gwfname, exe_name='mf6')
         
         # create iterative model solution
         imsgwf = flopy.mf6.ModflowIms(sim,
