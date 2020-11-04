@@ -1,0 +1,6 @@
+mtype 00
+--------
+nc =   1
+Index   Value
+ 4628    4
+
